@@ -2,12 +2,12 @@ var orm = require("../config/orm.js");
 
 var bodylang = {
 //   insert: function(some_val, cb) {
-//     orm.insert("burgers", "burger_name", some_val, function(res) {
+//     orm.insert("bodylangapp_db", "users_input", some_val, function(res) {
 //       cb(res);
 //     });
 //   },
 //   read: function(cb) {
-//     orm.read("burgers", function(res) {
+//     orm.read("bodylangapp_db", function(res) {
 //       cb(res);
 //     });
 //   },
