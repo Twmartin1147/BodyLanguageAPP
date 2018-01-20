@@ -1,0 +1,24 @@
+{
+  "name": "bodylangapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "TestScript.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Twmartin1147/BodyLanguageAPP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Twmartin1147/BodyLanguageAPP/issues"
+  },
+  "homepage": "https://github.com/Twmartin1147/BodyLanguageAPP#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "mysql": "^2.15.0"
+  }
+}

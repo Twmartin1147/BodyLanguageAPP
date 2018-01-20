@@ -8,7 +8,7 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
-    tone_input: "Greetings from Watson Developer Cloud!",
+    tone_input: "My charger isn’t working.",
     content_type: "text/plain"
   },
   function(err, tone) {
