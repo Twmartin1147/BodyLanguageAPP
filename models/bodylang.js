@@ -1,26 +1,28 @@
-var orm = require("../config/orm.js");
+// Dependencies
+// =============================================================
 
-var bodylang = {
-//   insert: function(some_val, cb) {
-//     orm.insert("bodylangapp_db", "users_input", some_val, function(res) {
-//       cb(res);
-//     });
-//   },
-//   read: function(cb) {
-//     orm.read("bodylangapp_db", function(res) {
-//       cb(res);
-//     });
-//   },
-//   update: function(user_id, cb) {
-//     orm.update("burgers", "devoured", 1, "id", user_id, function(res) {
-//       cb(res);
-//     });
-//   },
-//   delete: function(user_id, cb) {
-//     orm.delete("burgers", "id", user_id, function(res) {
-//       cb(res);
-//     });
-//   }
-// };
+// This may be confusing but here Sequelize (capital) references the standard library
+var Sequelize = require("sequelize");
+// sequelize (lowercase) references our connection to the DB.
+var sequelize = require("../config/connection.js");
 
-module.exports = bodylang;
+// Creates a "Chirp" model that matches up with DB
+var Bodylang = sequelize.define("language", {
+    author: {
+        type: Sequelize.STRING
+    },
+    body: {
+        type: Sequelize.STRING
+    },
+    created_at: {
+        type: Sequelize.DATE
+    }
+}, {
+        timestamps: false
+    });
+
+// Syncs with DB
+Bodylang.sync();
+
+// Makes the Chirp Model available for other files (will also create a table)
+module.exports = Bodylang;
