@@ -23,5 +23,6 @@
     "mysql": "^2.15.0",
     "orm": "^4.0.2",
     "sequelize": "^4.31.2"
-  }
+  },
+  "devDependencies": {}
 }
