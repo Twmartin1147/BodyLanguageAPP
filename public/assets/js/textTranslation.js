@@ -1,5 +1,7 @@
 var emoText = input text of user
-var emotion = returned emotion from Watson
+var emotion = function () {
+    if ()
+}
 var textColor = color associated with emotion
 var textFont = font pool assosciated with emotion
 
