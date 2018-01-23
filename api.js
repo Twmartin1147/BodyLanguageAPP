@@ -1,8 +1,16 @@
 var ToneAnalyzerV3 = require("watson-developer-cloud/tone-analyzer/v3");
 
-var TextTranslation = require("./public/assets/js/textTranslation.js")
+// var TextTranslation = require("./public/assets/js/textTranslation.js");
 
-var toneRes = {};
+var watsonRes = {};
+
+var watsonScore = {};
+
+var toneScore = [];
+
+var toneRes = [];
+
+var numTones;
 
 var tone_analyzer = new ToneAnalyzerV3({
   username: "a024676d-1867-42c5-9fac-5908cc52cf02",
@@ -12,17 +20,44 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
-    tone_input: TextTranslation.emoText,
+    // tone_input: TextTranslation.emoText,
+    tone_input: "I hate you, jerk!",
     content_type: "text/plain"
   },
   function(err, tone) {
     if (err) {
       console.log(err);
     } else {
-      console.log(JSON.stringify(tone, null, 2));
-      toneRes = JSON.stringify(tone, null, 2);
+      
+      numTones = JSON.stringify(tone.document_tone.tone_categories[0].tones[0].tone_name.length, null, 2);
+
+      for (var i = 0; i < numTones; i++){
+
+      watsonRes = JSON.stringify(tone.document_tone.tone_categories[0].tones[i].tone_name, null, 2);
+      
+      toneRes.push(watsonRes);
+
+      }
+      // console.log(JSON.stringify(watsonRes.tone_name));
+      i = 0;
+
+      for (i = 0; i < numTones; i++) {
+
+        watsonScore = JSON.stringify(tone.document_tone.tone_categories[0].tones[i].score, null, 2);
+
+        toneScore.push(watsonScore);
+
+      }
+
+      console.log(toneRes);
+
+      console.log(toneScore);
+
+      // return copyEmo();
     }
   }
 );
+
+
 
 Model.export = ToneResults;
