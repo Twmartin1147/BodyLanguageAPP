@@ -59,4 +59,4 @@ tone_analyzer.tone(
 
 
 
-Model.export = ToneResults;
+module.export = ToneResults;
