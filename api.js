@@ -1,6 +1,6 @@
 var ToneAnalyzerV3 = require("watson-developer-cloud/tone-analyzer/v3");
 
-// var TextTranslation = require("./public/assets/js/textTranslation.js");
+var TextTranslation = require("./public/assets/js/textTranslation.js");
 
 var watsonRes = {};
 
@@ -20,8 +20,8 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
-    // tone_input: TextTranslation.emoText,
-    tone_input: "I hate you, jerk!",
+    tone_input: TextTranslation.emoText,
+    // tone_input: "I hate you, jerk!",
     content_type: "text/plain"
   },
   function(err, tone) {
@@ -38,7 +38,7 @@ tone_analyzer.tone(
       toneRes.push(watsonRes);
 
       }
-      // console.log(JSON.stringify(watsonRes.tone_name));
+
       i = 0;
 
       for (i = 0; i < numTones; i++) {
@@ -53,7 +53,6 @@ tone_analyzer.tone(
 
       console.log(toneScore);
 
-      // return copyEmo();
     }
   }
 );
