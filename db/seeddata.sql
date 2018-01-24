@@ -8,11 +8,11 @@ values
 ("TestFive","LastNameFive","tester6@bodylang.net","testuser","testpasswrd5");
 
 
-insert into `users_input` 
+insert into `users_input` (uaid,users_input_data,bodylang_user_id)
 values(1,"Testers input data for one",1),
-values(1,"Testers input two data for one",1),
-values(2,"Testers input data for two",2),
-values(3,"Testers input data for three",3);
+(1,"Testers input two data for one",1),
+(2,"Testers input data for two",2),
+(3,"Testers input data for three",3);
 
 insert into pool_emotions (emotions, emotion_description)
 Values
