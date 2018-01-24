@@ -21,10 +21,12 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 // Static directory
 app.use(express.static("app/public"));
 
+
 // Routes
 // =============================================================
-require("./app/routes/api-routes.js")(app);
-
+// require("/routes/api-routes.js")(app);
+// There is no app folder removed ./appfrom require
+// require("/routes/html-routes.js")(app);
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function () {
