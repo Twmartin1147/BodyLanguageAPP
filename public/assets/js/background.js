@@ -1,5 +1,5 @@
 var bgColor = document.getElementById('home-top-first')
-var newColor = element grabbed from table
+var newColor = emotion.textTranslation
 function insertEmotion (){
     bgColor.style.color = newColor
 }

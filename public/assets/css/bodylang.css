@@ -23,7 +23,7 @@
 }
 
 .sad {
-  color: A#22A0C9;
+  color: #22A0C9;
   font-family: "Dutch Mediaeval"
 }
 .happy {
@@ -53,3 +53,25 @@
 .sympathetic {
 
 }
+var sad=class sad {
+  contructor(font, color) {
+    this.color: #22A0C9;
+    this.font-family: "Dutch Mediaeval"
+    this.background:
+  }
+}
+
+.happy {
+    this.color: #F5F90C;
+    this.font - family: "Cooper" 
+  }
+
+.frusterated {
+    this.color: #22A0C9;
+    .font-family: "Dutch Mediaeval"
+  }
+
+.satisfied {
+  
+    this.color: #F70000 this.font-family: "" 
+  }
