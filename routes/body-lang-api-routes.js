@@ -7,7 +7,7 @@
 var Bodylang = require("../models/bodylang_users.js");
 var express = require("express")
 var router = express.Router()
-
+var path = require("path")
 // Routes
 // ============================================================={
 
@@ -22,8 +22,8 @@ router.get("/api/test", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    res.send("bodylang")
-})
+    res.sendFile(path.join(__dirname,"../views/bodylang.html"))
+});
     
     
 //Add User
