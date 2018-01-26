@@ -6,6 +6,7 @@
 // =============================================================
 var express = require("express");
 var bodyParser = require("body-parser");
+var bodyLang = require("./routes/body-lang-api-routes");
 
 // Sets up the Express App
 // =============================================================
@@ -20,6 +21,7 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
 app.use(express.static("app/public"));
+app.use("/", bodyLang);
 
 
 // Routes

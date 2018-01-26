@@ -1,13 +1,7 @@
-.home-top-first {
-
+.w3-display-container {
+  background-color: #F5F90C
 }
 
-.navbar {
-  height: 20%
-}
-.navbar-default {
-  height: 75px
-}
 
 .create-form {
     padding: 5px;
@@ -23,19 +17,15 @@
 }
 
 .sad {
-  color: #22A0C9;
-  font-family: "Dutch Mediaeval"
+
 }
 .happy {
-  color: #F5F90C;
-  font-family: "Cooper"
+
 }
 .angry {
-  color: #F70000
-  font-family: ""
+
 }
 .frusterated {
-  color:
 
 }
 .satisfied {
@@ -53,25 +43,3 @@
 .sympathetic {
 
 }
-var sad=class sad {
-  contructor(font, color) {
-    this.color: #22A0C9;
-    this.font-family: "Dutch Mediaeval"
-    this.background:
-  }
-}
-
-.happy {
-    this.color: #F5F90C;
-    this.font - family: "Cooper" 
-  }
-
-.frusterated {
-    this.color: #22A0C9;
-    .font-family: "Dutch Mediaeval"
-  }
-
-.satisfied {
-  
-    this.color: #F70000 this.font-family: "" 
-  }

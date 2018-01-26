@@ -1,35 +1,30 @@
+var db = require("models")
 
-// var score = JSON.parse(toneScore)
-
-// var emotion = JSON.parse(toneRes)
-
-var score = [.5, .21, .1, .01]
-
-var emotion = ["sad", "angry", "happy", "joy"]
-// var textColor = color associated with emotion
-// var textFont = font pool assosciated with emotion
-
-
-var maxIndex = 0;
-function indexOfMax(score) {
-    if (arr.length === 0) {
-        return -1;
+// the purpose of this file is to grab the text input by the user, adn apply it to a new ID. 
+// From there, we will grab the row associated with the emotion returned from Watson and apply the CSS
+var emoText = document.getElementById("emotionalText")
+var emoButton = document.getElementById("emoCheck")
+var transText = documetn.getElementById("translationText")
+function (transaction, results) {
+    for (var i = 0; i < results.rows.length; i++) {
+        var row = results.rows.item(i);
+        alert(row['number']);
+        alert(row['name']);
     }
+};
 
-    var max = arr[0];
-    
+//Go through the row and add the needed syntax
 
-    for (var i = 1; i < arr.length; i++) {
-        if (arr[i] > max) {
-            maxIndex = i;
-            max = arr[i];
-        }
-    }
-
-    return maxIndex;
-
-   
+// ON click event that applies the users text to another div, then applys the CSS styling grabbed from the DB
+function initiate () {
+    $("emoButton").on(click, function (){
+        $("transText").val(emoText)
+        $("transText").css()
+    });
 }
+
+
+
 
 //var returnedEmo = toneRes[maxIndex]
 
@@ -39,28 +34,7 @@ function textConverter () {
     }
 }
 
-$(document).ready(function(){
-    if(){
-    $("#happy").on("click", function(){
-        if ()
-        console.log($("#emotionText").val())
-    });
-    } else if () {
-        $("#sad").on("click", function () {
-            if ()
-                console.log($("#emotionText").val())
-        });
-    } else if () {
-        $("#angry").on("click", function () {
-            if ()
-                console.log($("#emotionText").val())
-        });
-    } else {
-        $("#joy").on("click", function () {
-            if ()
-                console.log($("#emotionText").val())
-        });
-    }
-});
-
+fetch("/api/test").then(function(result){
+    console.log(result)
+})
 //phase 1 text box that says your emotion

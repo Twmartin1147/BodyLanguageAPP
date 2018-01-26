@@ -20,7 +20,7 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
-    tone_input: TextTranslation.emoText,
+    tone_input: TextTranslation.emotionText,
     // tone_input: "I hate you, jerk!",
     content_type: "text/plain"
   },
@@ -57,6 +57,26 @@ tone_analyzer.tone(
   }
 );
 
+ var maxIndex = 0;
+  function indexOfMax(toneScore) {
+    if (arr.length === 0) {
+      return -1;
+    }
 
+    var max = arr[0];
+
+
+    for (var i = 1; i < arr.length; i++) {
+      if (arr[i] > max) {
+        maxIndex = i;
+        max = arr[i];
+      }
+    }
+
+    return maxIndex;
+
+
+  }
+maxIndex = toneRes[]
 
 module.export = ToneResults;
