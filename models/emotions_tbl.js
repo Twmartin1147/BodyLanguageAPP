@@ -1,10 +1,11 @@
 module.exports = function(sequelize, DataTypes){
 
-var UserEmotions = sequelize.define("pool_emotions",{
+var UserEmotions = sequelize.define("useremotions",{
 
     emotions:  {
         type: DataTypes.STRING,
-        allowNull:false
+        allowNull:false,
+        primaryKey: true
     },
     emotion_font: {
         type:DataTypes.STRING,

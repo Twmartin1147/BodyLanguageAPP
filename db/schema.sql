@@ -23,7 +23,7 @@ users_input_data varchar(255) NOT NULL,
 `bodylang_user_id` INT,
 FOREIGN KEY (bodylang_user_id) References `bodylang_users`(id));
 
-create table UserEmotions(
+create table useremotions(
 emotions  varchar(50) NOT NULL,
 emotion_font varchar(50) NOT NULL,
 emotion_color char(7) NOT NULL,
