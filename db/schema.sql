@@ -24,8 +24,9 @@ users_input_data varchar(255) NOT NULL,
 FOREIGN KEY (bodylang_user_id) References `bodylang_users`(id));
 
 create table pool_emotions(
-emotion_id INT AUTO_INCREMENT NOT NULL,
 emotions  varchar(50) NOT NULL,
-emotion_description varchar(255) NOT NULL,
-PRIMARY KEY (emotion_id)
+emotion_font varchar(50) NOT NULL,
+emotion_color char(7) NOT NULL,
+emotion_background_color char(7) NOT NULL,
+PRIMARY KEY (emotions)
 );

@@ -1,8 +1,8 @@
 
 module.exports = function(sequelize, DataTypes) {
     
-  
-var Bodylang = sequelize.define("BodyLang", {
+//   Name of the table after define-change
+var Bodylang = sequelize.define("bodylang_users", {
     id: DataTypes.STRING,
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,

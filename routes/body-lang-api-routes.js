@@ -4,8 +4,8 @@
 
 // Dependencies
 // =============================================================
-var Bodylang = require("../models/bodylang_users.js");
 
+var Bodylang = require("../models/bodylang_users.js");
 
 // Routes
 // =============================================================
