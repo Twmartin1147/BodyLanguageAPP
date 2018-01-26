@@ -1,9 +1,9 @@
-var Bodylang = require("../models/emotions_tbl.js");
+var db = require("../models");
 
 module.exports = function (app) {
 
 app.get('/emotions', function (req, res) {
-    Calculator.findAll()
+  db.UserEmotions.findAll()
       .then(function(emotions) {
         return res.json({emotions})
       })

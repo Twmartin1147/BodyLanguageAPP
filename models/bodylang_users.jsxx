@@ -8,8 +8,7 @@ var Bodylang = sequelize.define("bodylang_users", {
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     user_name: DataTypes.STRING,
-    user_password: DataTypes.STRING,
-    created_at: DataType.DATE
+    user_password: DataTypes.STRING
     });
     
     Bodylang.associate = function(models) {
