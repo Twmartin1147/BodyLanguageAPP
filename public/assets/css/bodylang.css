@@ -1,21 +1,21 @@
-.w3-display-container {
-  background-color: #F5F90C
+
+.title {
+font-family: Arial, sans-serif, Bold;
 }
 
-
-.create-form {
-    padding: 5px;
-    margin: 5px;
-    background: aqua;
-  }
-  
-  .form-group {
-    margin-bottom: 5px;
-  }
-.body {
-  padding: 10px
+.bl-top {
+  width: 100%;
+  background-color: #fff569;
 }
 
+#bl-wwa {
+  background-color: black;
+  color: white;
+}
+
+body {
+
+}
 .sad {
 
 }

@@ -1,1 +1,10 @@
-<h3>hi</h3>
+var userEmotion = "<b>Your {{emotion}}</b>"
+var TextTranslation = require("ton")
+var ToneResult = require("../api.js")
+
+var template = Handlebars.compile(userEmotion);
+
+var data = template({emotion: ToneReult.toneRes})
+
+$("#userEmotion").html(userEmotion)
+

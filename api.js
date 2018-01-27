@@ -22,6 +22,8 @@ tone_analyzer.tone(
   {
     tone_input: TextTranslation.emotionText,
     // tone_input: "I hate you, jerk!",
+    tone_input: TextTranslation.emoText,
+    // tone_input: "I love everything",
     content_type: "text/plain"
   },
   function(err, tone) {
@@ -59,17 +61,17 @@ tone_analyzer.tone(
 
  var maxIndex = 0;
   function indexOfMax(toneScore) {
-    if (arr.length === 0) {
+    if (toneScore.length === 0) {
       return -1;
     }
 
-    var max = arr[0];
+    var max = toneScore[0];
 
 
-    for (var i = 1; i < arr.length; i++) {
-      if (arr[i] > max) {
+    for (var i = 1; i < toneScore.length; i++) {
+      if (toneScore[i] > max) {
         maxIndex = i;
-        max = arr[i];
+        max = toneScore[i];
       }
     }
 
@@ -77,6 +79,11 @@ tone_analyzer.tone(
 
 
   }
-maxIndex = toneRes[]
+
+  
+toneRes = toneRes[maxIndex]
+// var results = toneScore.indexOf(Math.max(toneScore));
+
+// console.log(results);
 
 module.export = ToneResults;

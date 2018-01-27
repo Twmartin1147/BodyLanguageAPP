@@ -22,7 +22,7 @@ router.get("/api/test", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname,"../views/bodylang.html"))
+    res.sendFile(path.join(__dirname,"../routes/body-lang-api-routes.js"))
 });
     
     
