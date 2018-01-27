@@ -20,8 +20,7 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
-    tone_input: TextTranslation.emotionText,
-    // tone_input: "I hate you, jerk!",
+
     tone_input: TextTranslation.emoText,
     // tone_input: "I love everything",
     content_type: "text/plain"
@@ -82,6 +81,7 @@ tone_analyzer.tone(
 
   
 toneRes = toneRes[maxIndex]
+
 // var results = toneScore.indexOf(Math.max(toneScore));
 
 // console.log(results);

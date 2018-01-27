@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var UserInput = sequelize.define("UserInput", {
+  var UserInput = sequelize.define("users_input", {
     uaid: DataTypes.INTEGER,
     bodylang_user_id:{
       type: DataTypes.INTEGER,

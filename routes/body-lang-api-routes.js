@@ -4,10 +4,12 @@
 
 // Dependencies
 // =============================================================
+
 var Bodylang = require("../models/bodylang_users.js");
 var express = require("express")
 var router = express.Router()
 var path = require("path")
+
 // Routes
 // ============================================================={
 
