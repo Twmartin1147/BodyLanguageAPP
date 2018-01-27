@@ -1,98 +1,294 @@
+
+<!DOCTYPE html>
 <html>
-    <head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
-    crossorigin="anonymous">
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
-    crossorigin="anonymous">
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-    crossorigin="anonymous"></script>
+<title>Body Language</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="../public/assets/css/bodylang.css">
+<!--<script src="../public/assets/js/textTranslation.js"></script>-->
+<style>
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Oswald"
+    }
 
-<link href="../public/assets/css/bodylang.css">
-<script src="../public/assets/js/textTranslation.js"></script>
-    </head>
-    <body>
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="...">
-                        <img src="../public/assets/img/BLLogo-1.png"> </a>
-                </div>
+    body {
+        font-family: "Open Sans"
+    }
+</style>
 
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">Emotions
-                                <span class="sr-only">(current)</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">Your Patterns</a>
-                        </li>
+<body class="w3-light-grey">
 
-                    </ul>
-                    <form class="navbar-form navbar-left">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search">
-                        </div>
-                        <button type="submit"  class="btn btn-default">Submit</button>
-                    </form>
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="#">Sign In</a>
-                        </li>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
+    <!-- Navigation bar with social media icons -->
+    <div class="w3-bar w3-black w3-hide-small">
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-facebook-official"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-instagram"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-twitter"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button">
+            <i class="fa fa-linkedin"></i>
+        </a>
+        <a href="#" class="w3-bar-item w3-button w3-right">
+            <i class="fa fa-search"></i>
+        </a>
+    </div>
+
+    <!-- w3-content defines a container for fixed size centered content, 
+and is wrapped around the whole page content, except for the footer in this example -->
+    <div class="w3-content" style="max-width:1600px">
+
+        <!-- Header -->
+        <header class="w3-container w3-center w3-padding-48 bl-top">
+            <h1 class="w3-xxxlarge">
+                <b><img class="logo w3-center" src="../public/assets/img/BLLogo-1.png"></b>
+            </h1>
+            <h6>Show your emotions
+                <span class="w3-tag">Through text</span>
+            </h6>
+        </header>
+
+        <!-- Color header -->
+        <!-- <header class="w3-row w3-display-container w3-wide" id="home">
+            <!--<img class="w3-image" src="/w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"-->
+            <!-- <div class="w3-display-left w3-padding-large w3-white banner">
+                <h1 class="w3-text-grey title">Body</h1>
+                <h1 class="w3-jumbo w3-text-grey w3-hide-small title">
+                    <b>Language</b>
+                </h1>
             </div>
-            <!-- /.container-fluid -->
-        </nav>
-        <div class="home-top">
-            <div class="home-top-first">
-                <div class="home-top-first-content">
-<h2>Many text go misunderstood beacuase of the emotionlessness of text, we are here to help with that.</h2>
-                    <h3>How are you feelin today? Type what you want, and click your emotion...</h3>
-                        <form>
-                            <div class="form-group">
-                                <label for="emotionText">Emotion Translator</label>
-                                <textarea class="form-control" id="emotionText" rows="4"></textarea>
+        </header> --> 
+
+        <!-- Grid -->
+        <div class="w3-row w3-padding w3-border">
+
+            <!--Page begining-->
+            <div class="w3-col l8 s12">
+
+                <!-- Blog entry -->
+                <div class="w3-container w3-white w3-margin w3-padding-large">
+                        <div class="w3-display w3-padding-large w3-white banner">
+                                <h1 class="w3-text-grey title">Body</h1>
+                                <h1 class="w3-jumbo w3-text-grey w3-hide-small title">
+                                    <b>Language</b>
+                                </h1>
                             </div>
-                        </form>
-                        <button type="button" id="happy" class="btn btn-default" ng-click="click()">
-                        Happy
-                    </button>
-                    <button type="button" id="sad" class="btn btn-default" ng-click="click()">
-                        Sad
-                    </button>
-                    <button type="button"id="angry" class="btn btn-default" ng-click="click()">
-                        Angry
-                    </button>
-                    <button type="button" id="joy" class="btn btn-default" ng-click="click()">
-                        Joy
-                    </button>
-                </div>
-            </div>
-            <div class="container">
-                <div class="returnedEmo">
+                    
 
+                    <div class="w3-justify">
+                        
+                        <p>
+                            <strong>Many text</strong> go misunderstood beacuase of the emotionlessness of text, we are here to help with that.</p>
+                        <p>How are you feelin today? Type your thoughts, press the button. We'll do the rest.</p>
+                        <p class="w3-left">
+                            <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+                                <b>
+                                    <i class="fa fa-thumbs-up"></i> Like</b>
+                            </button>
+                        </p>
+                        <p class="w3-right">
+                            <form>
+                                <div class="w3-row-padding">
+                                    <div class="w3-col m12">
+                                      <div class="w3-card w3-round w3-white">
+                                        <div class="w3-container w3-padding">
+                                          <h6 class="w3-opacity">Lets See Some Emotion</h6>
+                                          <p contenteditable="true" class="w3-border w3-padding">We are going to apply some Body Language</p>
+                                          <button type="button" id="emoCheck" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Show Emotion</button> 
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                            </form>
+                        </p>
+                        <p class="w3-clear"></p>
+                        <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
+                            <hr>
+                            <div class="w3-col l2 m3">
+                                <img src="..." style="width:90px;">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="home-top-second">
-                <div class="home-top-second-content">
-                    <h2>You past emotions</h2>
-                    <h3>This is what we have translated for you, and the emotions you were trying to portay.</h3>
-                   
+                <hr>
+
+                <!-- Blog entry -->
+                <div class="w3-container w3-white w3-margin w3-padding-large">
+                    <div class="w3-center">
+                        
+                    </div>
+
+                    <div class="w3-justify">
+                        
+                        <p id="translationText">
+
+                        </p>
+                        
+                        <p class="w3-clear"></p>
+
+                        <!-- Example of comment field -->
+                        
+                    </div>
                 </div>
+
+                <!-- END BLOG ENTRIES -->
             </div>
-            <div class="clear">&nbsp;</div>
+
+            <!-- About/Information menu -->
+            <div class="w3-col l4">
+                <!-- About Card -->
+                <div class="w3-margin">
+                    <!--style="width:100%" -->
+                        <h4 style="color:#0fa7f6"><img src="../public/assets/img/BLGlyphy.png" alt="BL" class="w3-grayscale">Who we are</h4>
+                        <div class="w3-container" id="bl-wwa">
+                        <p>Just four people trying to get an idea together. We hope to see this grow into something useful for people when communicating via text.</p>
+                        </div>
+                </div>
+                <hr>
+
+                <!-- Posts -->
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                        <h4>Your Recent Emotions</h4>
+                    </div>
+                    <ul class="w3-ul w3-hoverable w3-white">
+                        <li class="w3-padding-16">
+                            
+                            <span>Sed mattis nunc</span>
+                        </li>
+                        <li class="w3-padding-16">
+                           
+                            <span>Praes tinci sed</span>
+                        </li>
+                        <li class="w3-padding-16">
+                            
+                            <span>Ultricies congue</span>
+                        </li>
+                        <li class="w3-padding-16">
+                           
+                            <span>Lorem ipsum dipsum</span>
+                        </li>
+                    </ul>
+                </div>
+                <hr>
+
+                <!-- Advertising -->
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                        <h4>Advertise</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                        <div class="w3-container w3-display-container w3-light-grey w3-section" style="height:200px">
+                            <span class="w3-display-middle">Your AD Here</span>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Free Area -->
+                <div class="w3-white w3-margin">
+                    
+                <hr>
+
+                <!-- Free Area -->
+                <div class="w3-white w3-margin">
+              
+                </div>
+                <hr>
+
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                        <h4>Follow Me</h4>
+                    </div>
+                    <div class="w3-container w3-xlarge w3-padding">
+                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                        <i class="fa fa-instagram w3-hover-opacity"></i>
+                        <i class="fa fa-twitter w3-hover-opacity"></i>
+                        <i class="fa fa-linkedin w3-hover-opacity"></i>
+                    </div>
+                </div>
+                <hr>
+
+                <!-- Subscribe -->
+                <div class="w3-white w3-margin">
+                    <div class="w3-container w3-padding w3-black">
+                        <h4>Subscribe</h4>
+                    </div>
+                    <div class="w3-container w3-white">
+                        <p>Enter your e-mail below and get notified on Body Languages most recent updates.</p>
+                        <p>
+                            <input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%">
+                        </p>
+                        <p>
+                            <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- END About/Intro Menu -->
+            </div>
+
+            <!-- END GRID -->
         </div>
 
-    </body>
+        <!-- END w3-content -->
+    </div>
+
+    <!-- Subscribe Modal -->
+    <div id="subscribe" class="w3-modal w3-animate-opacity">
+        <div class="w3-modal-content" style="padding:32px">
+            <div class="w3-container w3-white">
+                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                <h2 class="w3-wide">SUBSCRIBE</h2>
+                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+                <p>
+                    <input class="w3-input w3-border" type="text" placeholder="Enter e-mail">
+                </p>
+                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-container w3-dark-grey" style="padding:32px">
+        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        <p>Powered by
+            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+        </p>
+    </footer>
+
+    <script>
+        // Toggle between hiding and showing blog replies/comments
+        document.getElementById("myBtn").click();
+
+        function myFunction(id) {
+            var x = document.getElementById(id);
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else {
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+        function likeFunction(x) {
+            x.style.fontWeight = "bold";
+            x.innerHTML = "✓ Liked";
+        }
+    </script>
+
+</body>
+
 </html>

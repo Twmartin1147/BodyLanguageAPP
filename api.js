@@ -20,6 +20,7 @@ var tone_analyzer = new ToneAnalyzerV3({
 
 tone_analyzer.tone(
   {
+
     tone_input: TextTranslation.emoText,
     // tone_input: "I love everything",
     content_type: "text/plain"
@@ -56,6 +57,30 @@ tone_analyzer.tone(
     }
   }
 );
+
+ var maxIndex = 0;
+  function indexOfMax(toneScore) {
+    if (toneScore.length === 0) {
+      return -1;
+    }
+
+    var max = toneScore[0];
+
+
+    for (var i = 1; i < toneScore.length; i++) {
+      if (toneScore[i] > max) {
+        maxIndex = i;
+        max = toneScore[i];
+      }
+    }
+
+    return maxIndex;
+
+
+  }
+
+  
+toneRes = toneRes[maxIndex]
 
 // var results = toneScore.indexOf(Math.max(toneScore));
 
