@@ -9,7 +9,7 @@ var connection = mysql.createConnection({
 
 connection.connect();
 
-var watsonRes;
+var watsonRes = "Sad";
 
 var query = connection.query("SELECT * FROM useremotions WHERE emotions = " + watsonRes);
 

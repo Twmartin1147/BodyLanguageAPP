@@ -1,6 +1,6 @@
 var ToneAnalyzerV3 = require("watson-developer-cloud/tone-analyzer/v3");
 
-var TextTranslation = require("./public/assets/js/textTranslation.js");
+var TextTranslation = require("public/assets/js/textTranslation.js");
 
 var watsonRes = {};
 
@@ -21,8 +21,8 @@ var tone_analyzer = new ToneAnalyzerV3({
 tone_analyzer.tone(
   {
 
-    tone_input: TextTranslation.emoText,
-    // tone_input: "I love everything",
+    // tone_input: TextTranslation.emoText,
+    tone_input: "I love everything",
     content_type: "text/plain"
   },
   function(err, tone) {
@@ -44,11 +44,16 @@ tone_analyzer.tone(
 
       for (i = 0; i < numTones; i++) {
 
-        watsonScore = JSON.stringify(tone.document_tone.tone_categories[0].tones[i].score, null, 2);
+        watsonScore = parseFloat(tone.document_tone.tone_categories[0].tones[i].score);
 
         toneScore.push(watsonScore);
 
       }
+
+      
+      var result = Math.max(toneScore);
+
+      console.log(result);
 
       console.log(toneRes);
 
@@ -58,32 +63,32 @@ tone_analyzer.tone(
   }
 );
 
- var maxIndex = 0;
-  function indexOfMax(toneScore) {
-    if (toneScore.length === 0) {
-      return -1;
-    }
+//  var maxIndex = 0;
+//   function indexOfMax(toneScore) {
+//     if (toneScore.length === 0) {
+//       return -1;
+//     }
 
-    var max = toneScore[0];
-
-
-    for (var i = 1; i < toneScore.length; i++) {
-      if (toneScore[i] > max) {
-        maxIndex = i;
-        max = toneScore[i];
-      }
-    }
-
-    return maxIndex;
+//     var max = toneScore[0];
 
 
-  }
+//     for (var i = 1; i < toneScore.length; i++) {
+//       if (toneScore[i] > max) {
+//         maxIndex = i;
+//         max = toneScore[i];
+//       }
+//     }
+
+//     return maxIndex;
+
+
+//   }
 
   
-toneRes = toneRes[maxIndex]
+// toneRes = toneRes[maxIndex];
 
 // var results = toneScore.indexOf(Math.max(toneScore));
 
 // console.log(results);
 
-module.export = ToneResults;
+// module.export = ToneResults;
