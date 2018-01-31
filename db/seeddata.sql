@@ -15,7 +15,7 @@ values
 (2,"Testers input data for two",2),
 (3,"Testers input data for three",3);
 
-insert into useremotions (emotions, emotion_font,emotion_color,emotion_background_color)
+insert into useremotions (emotions, font-family,color,background-color)
 Values
 ("Anger","Arial","#ed2828","#EAEDED"),
 ("Sadness","Helvetica","#1d73e2","#FCF3CF"),

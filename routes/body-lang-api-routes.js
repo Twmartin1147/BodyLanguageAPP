@@ -15,7 +15,7 @@ var path = require("path")
 
 // Get all users
 router.get("/views", function (req, res) {
-    res.sendFile(path.join(__dirname, "../routes/bodylang.html"))
+    res.sendFile(path.join(__dirname, "../views/bodylang.html"))
 });
 
 // TestRoute
@@ -24,7 +24,7 @@ router.get("/api/test", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname,"../views/bodylang.html"))
+    res.sendFile(path.join(__dirname,"../views/layouts/main.handlebars"))
 });
     
     

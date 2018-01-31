@@ -7,15 +7,15 @@ var UserEmotions = sequelize.define("useremotions",{
         allowNull:false,
         primaryKey: true
     },
-    emotion_font: {
+    font_family: {
         type:DataTypes.STRING,
         allowNull:false
     },
-    emotion_color: {
+    color: {
         type:DataTypes.STRING,
         allownull:false},
 
-    emotion_background_color:{
+    background_color:{
         type:DataTypes.STRING,
         allowNull: false
     } 
