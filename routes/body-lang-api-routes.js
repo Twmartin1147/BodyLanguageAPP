@@ -14,8 +14,8 @@ var path = require("path")
 // ============================================================={
 
 // Get all users
-router.get("/api/bodylang", function (req, res) {
-    res.send("THIS IS THE BODYLANG ROUTE")
+router.get("/views", function (req, res) {
+    res.sendFile(path.join(__dirname, "../routes/bodylang.html"))
 });
 
 // TestRoute
@@ -24,7 +24,7 @@ router.get("/api/test", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname,"../routes/body-lang-api-routes.js"))
+    res.sendFile(path.join(__dirname,"../views/bodylang.html"))
 });
     
     

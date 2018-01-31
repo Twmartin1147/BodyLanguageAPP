@@ -1,5 +1,5 @@
-var db = require("models")
-var ToneResults = require("./../../../api.js")
+// var db = require("models")
+// var ToneResults = require("./../../../api.js")
 
 // the purpose of this file is to grab the text input by the user, adn apply it to a new ID. 
 // From there, we will grab the row associated with the emotion returned from Watson and apply the CSS
@@ -8,14 +8,24 @@ var emoButton = document.getElementById("emoCheck")
 var transText = document.getElementById("translationText")
 
 
-
+// $.get("seeddadta.sql", )
 //Go through the row and add the needed syntax
 
 // ON click event that applies the users text to another div, then applys the CSS styling grabbed from the DB
 
-    $("emoButton").on(click, function (){
-        $("transText").val(emoText)
-        // <!--$("transText").css()-->
+$("emoButton").on("click", function (){
+     $("transText").html(emoText)
+        // ToneResults
+
+        // $.ajax({
+        //     url:
+        //     method: "GET"
+        // })
+        // .done(function(ToneResults) {
+        //     var css = response
+        // })
+        
+        
     });
 
 
@@ -32,7 +42,7 @@ var transText = document.getElementById("translationText")
 
 // fetch("/api/test").then(function(result){
 //     console.log(result)
-})
+// })
 //phase 1 text box that says your emotion
 
-module.export = TextTranslation
+// module.export = TextTranslation
