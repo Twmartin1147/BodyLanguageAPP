@@ -41,9 +41,7 @@
         <a href="#" class="w3-bar-item w3-button">
             <i class="fa fa-linkedin"></i>
         </a>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-search"></i>
-        </a>
+        <button class="w3-bar-item w3-button w3-right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><i class="fa fa-male"></i></button>
     </div>
 
     <!-- w3-content defines a container for fixed size centered content, 
@@ -92,12 +90,6 @@ and is wrapped around the whole page content, except for the footer in this exam
                         <p>
                             <strong>Many text</strong> go misunderstood beacuase of the emotionlessness of text, we are here to help with that.</p>
                         <p>How are you feelin today? Type your thoughts, press the button. We'll do the rest.</p>
-                        <p class="w3-left">
-                            <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
-                                <b>
-                                    <i class="fa fa-thumbs-up"></i> Like</b>
-                            </button>
-                        </p>
                         <p class="w3-right">
                             <form>
                                 <div class="w3-row-padding">
@@ -105,13 +97,13 @@ and is wrapped around the whole page content, except for the footer in this exam
                                       <div class="w3-card w3-round w3-white">
                                         <div class="w3-container w3-padding">
                                           <h6 class="w3-opacity">Lets See Some Emotion</h6>
-                                          <p contenteditable="true" class="w3-border w3-padding">We are going to apply some Body Language</p>
+                                          <p contenteditable="true" class="w3-border w3-padding" id="emotionalText">We are going to apply some Body Language</p>
                                           <button type="button" id="emoCheck" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Show Emotion</button> 
                                         </div>
                                       </div>
                                     </div>
                                   </div>
-                            </form>
+                                </form>
                         </p>
                         <p class="w3-clear"></p>
                         <div class="w3-row w3-margin-bottom" id="demo1" style="display:none">
@@ -136,7 +128,11 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                         </p>
                         
-                        <p class="w3-clear"></p>
+                        <p class="w3-left">
+                            <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+                                <b></b><i class="fa fa-thumbs-up"></i> Like</b>
+                            </button>                         
+                        </p>
 
                         <!-- Example of comment field -->
                         
@@ -163,29 +159,29 @@ and is wrapped around the whole page content, except for the footer in this exam
                     <div class="w3-container w3-padding w3-black">
                         <h4>Your Recent Emotions</h4>
                     </div>
-                    <ul class="w3-ul w3-hoverable w3-white">
-                        <li class="w3-padding-16">
+                    <ul class="w3-ul w3-hoverable">
+                        <li id="span1" class="w3-padding-16">
                             
-                            <span>Sed mattis nunc</span>
+                            <span>Happy</span>
                         </li>
-                        <li class="w3-padding-16">
+                        <li id="span2" class="w3-padding-16">
                            
-                            <span>Praes tinci sed</span>
+                            <span>Happy</span>
                         </li>
-                        <li class="w3-padding-16">
+                        <li id="span3" class="w3-padding-16">
                             
-                            <span>Ultricies congue</span>
+                            <span>Mad</span>
                         </li>
-                        <li class="w3-padding-16">
+                        <li id="span4" class="w3-padding-16">
                            
-                            <span>Lorem ipsum dipsum</span>
+                            <span>Angry</span>
                         </li>
                     </ul>
                 </div>
                 <hr>
 
                 <!-- Advertising -->
-                <div class="w3-white w3-margin">
+                <!-- <div class="w3-white w3-margin">
                     <div class="w3-container w3-padding w3-black">
                         <h4>Advertise</h4>
                     </div>
@@ -194,7 +190,7 @@ and is wrapped around the whole page content, except for the footer in this exam
                             <span class="w3-display-middle">Your AD Here</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <hr>
 
                 <!-- Free Area -->
@@ -210,7 +206,7 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                 <div class="w3-white w3-margin">
                     <div class="w3-container w3-padding w3-black">
-                        <h4>Follow Me</h4>
+                        <h4>Follow Us</h4>
                     </div>
                     <div class="w3-container w3-xlarge w3-padding">
                         <i class="fa fa-facebook-official w3-hover-opacity"></i>
@@ -265,9 +261,6 @@ and is wrapped around the whole page content, except for the footer in this exam
     <footer class="w3-container w3-dark-grey" style="padding:32px">
         <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
             <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <p>Powered by
-            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-        </p>
     </footer>
 
     <script>

@@ -8,14 +8,14 @@ var emoButton = document.getElementById("emoCheck")
 var transText = document.getElementById("translationText")
 
 
-
+$.get("seeddadta.sql", )
 //Go through the row and add the needed syntax
 
 // ON click event that applies the users text to another div, then applys the CSS styling grabbed from the DB
 
     $("emoButton").on(click, function (){
-        $("transText").val(emoText)
-        // <!--$("transText").css()-->
+        $("transText").text(emoText)
+        
     });
 
 
