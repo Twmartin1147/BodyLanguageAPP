@@ -20,7 +20,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
 // Static directory
-app.use(express.static("app/public"));
+app.use(express.static("/public"));
 
 var exphbs = require("express-handlebars");
 
@@ -36,7 +36,7 @@ app.set("view engine", "handlebars");
 // require("./routes/emotions-api-routes.js")(app);
 var routes = require("./controllers/bodylang_app_controller");
 
-app.use("/getemotions", routes);
+app.use("/", routes);
 // app.use("/update", routes);
 // app.use("/create", routes);
 // Starts the server to begin listening

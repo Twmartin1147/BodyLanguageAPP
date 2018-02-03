@@ -4,7 +4,7 @@
   "description": "",
   "main": "TestScript.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "echo \"mocha",
     "start": "node server.js"
   },
   "repository": {

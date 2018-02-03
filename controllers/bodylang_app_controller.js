@@ -5,28 +5,41 @@ var router = express.Router();
 var db = require("../models");
 
 // get route -> index
-router.get("/", function(req, res) {
-    // send us to the next get function instead.
-    res.redirect("/getemotions");
+// router.get("/", function(req, res) {
+//     // send us to the next get function instead.
+//    console.log("Testing",res);
+   router.get("/", function (req, res) {
+    res.send("THIS IS THE BODYLANG ROUTE")
   });
   // get route, edited to match sequelize
-router.get("/getemotions", function(req, res) {
-    // replace old function with sequelize function
-    db.UserEmotions.findAll({
-    //   include: [db.userid],
-      // Here we specify we want to return our burgers in ordered by ascending burger_name
-      order: [
-        ["emotions", "ASC"]
-      ]
-    })
-    // use promise method to pass the burgers...
-    .then(function(dbUserEmotioins) {
-      // into the main index, updating the page
-      var hbsObject = {
-        emtions: dbUserEmotioins
-      };
-    //   return res.render("index", hbsObject);
-      return res.render("bodylang", hbsObject);
+router.get("/useremotions", function(req, res) {
+//     // replace old function with sequelize function
+    db.useremotions.findAll()
+     .then(function(useremotions) {
+       return res.json({useremotions})
+     })
+     .catch(function(error) {
+      return res.status(500).json({message: 'internal server error'});
     });
+      console.log("Emotions");
+      // result.render("bodylang", hbsObject);
+    
   });
+
+//     
+//       order: [
+//         ["emotions", "ASC"]
+//       ]
+//     })
+//     // use promise method to pass the emotions...
+    // .then(function(dbUserEmotioins) {
+    //   // into the main index, updating the page
+    //   var hbsObject = {
+    //     emotions: dbUserEmotioins
+    //   };
+    // //   return res.render("index", hbsObject);
+    //   return res.render("bodylang", hbsObject);
+    
+    // });
+  // });
   module.exports = router;
