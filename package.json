@@ -26,7 +26,8 @@
     "mysql": "^2.15.0",
     "mysql2": "^1.5.1",
     "orm": "^4.0.2",
-    "sequelize": "^4.31.2"
+    "sequelize": "^4.31.2",
+    "watson-developer-cloud": "^3.0.5"
   },
   "devDependencies": {
     "browserify": "^15.2.0",

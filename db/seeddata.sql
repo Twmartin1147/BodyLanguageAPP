@@ -15,15 +15,15 @@ values
 (2,"Testers input data for two",2),
 (3,"Testers input data for three",3);
 
-insert into useremotions (emotions, emotion_font,emotion_color,emotion_background_color)
+insert into useremotions (emotions, font-family,color,background-color)
 Values
-("Anger","Arial","#008000","#EAEDED"),
-("Sadness","Helvetica","#00FFFF","#FCF3CF"),
-("Joy","Times New Roman","#008080","#F5EEF8"),
-("Disgust","Courier New","#0000FF","#FADBD8"),
-("Surprise","Times","#2471A3","#D6EAF8"),
-("Fear","Courier","#ff1f1f","#121856"),
-("Excited","Arial Black","#fe81cf","#561253"),
-("Scared","Gerogia","#FF8C00","#281256"),
-("Sad","Verdana","#362828","#123456"),
-("Happy","Tahoma","#eeff3b","#12564a");
+("Anger","Arial","#ed2828","#EAEDED"),
+("Sadness","Helvetica","#1d73e2","#FCF3CF"),
+("Joy","Times New Roman","#ecf720","#F5EEF8"),
+("Disgust","Courier New","#a145ad","#FADBD8"),
+("Surprise","Times","#ffd000","#D6EAF8"),
+("Fear","Courier","#660000","#121856"),
+("Excited","Arial Black","#15f25f","#561253"),
+("Scared","Gerogia","#bdc400","#281256"),
+("Sad","Verdana","#317aaa","#123456"),
+("Happy","Tahoma","#26ff00","#12564a");

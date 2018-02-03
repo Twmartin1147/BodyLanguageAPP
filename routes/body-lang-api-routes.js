@@ -5,7 +5,7 @@
 // Dependencies
 // =============================================================
 
-var Bodylang = require("../models/bodylang_users.js");
+var Bodylang = require("../models/emotions-api-routes.js");
 var express = require("express")
 var router = express.Router()
 var path = require("path")
@@ -14,8 +14,8 @@ var path = require("path")
 // ============================================================={
 
 // Get all users
-router.get("/api/bodylang", function (req, res) {
-    res.send("THIS IS THE BODYLANG ROUTE")
+router.get("/views", function (req, res) {
+    res.sendFile(path.join(__dirname, "../views/bodylang.html"))
 });
 
 // TestRoute
@@ -24,7 +24,7 @@ router.get("/api/test", function(req, res) {
 });
 
 router.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname,"../routes/body-lang-api-routes.js"))
+    res.sendFile(path.join(__dirname,"../views/layouts/main.handlebars"))
 });
     
     

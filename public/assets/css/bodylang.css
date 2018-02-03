@@ -12,7 +12,22 @@ font-family: Arial, sans-serif, Bold;
   background-color: black;
   color: white;
 }
-
+#span1 {
+  background-color: #fff569;
+  border-radius: 25px;
+}
+#span2 {
+  background-color: #fff569;
+  border-radius: 25px;
+}
+#span3 {
+  background-color: red;
+  border-radius: 25px;
+}
+#span4 {
+  background-color: #8b0000;
+  border-radius: 25px;
+}
 body {
 
 }

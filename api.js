@@ -1,6 +1,7 @@
+
 var ToneAnalyzerV3 = require("watson-developer-cloud/tone-analyzer/v3");
 
-var TextTranslation = require("public/assets/js/textTranslation.js");
+// var TextTranslation = require("public/assets/js/textTranslation.js");
 
 var watsonRes = {};
 
@@ -51,7 +52,9 @@ tone_analyzer.tone(
       }
 
       
-      var result = Math.max(toneScore);
+      var result = Math.max(...toneScore);
+
+      
 
       console.log(result);
 
@@ -59,30 +62,18 @@ tone_analyzer.tone(
 
       console.log(toneScore);
 
+      console.log(toneScore.indexOf(result))
+
+      console.log(toneRes[toneScore.indexOf(result)])
+
+      var watEmo = toneRes[toneScore.indexOf(result)
+
+        return watEmo
+      
     }
   }
 );
 
-//  var maxIndex = 0;
-//   function indexOfMax(toneScore) {
-//     if (toneScore.length === 0) {
-//       return -1;
-//     }
-
-//     var max = toneScore[0];
-
-
-//     for (var i = 1; i < toneScore.length; i++) {
-//       if (toneScore[i] > max) {
-//         maxIndex = i;
-//         max = toneScore[i];
-//       }
-//     }
-
-//     return maxIndex;
-
-
-//   }
 
   
 // toneRes = toneRes[maxIndex];
@@ -91,4 +82,4 @@ tone_analyzer.tone(
 
 // console.log(results);
 
-// module.export = ToneResults;
+module.export = ToneResults;

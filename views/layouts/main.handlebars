@@ -1,14 +1,14 @@
 
-<!DOCTYPE html>
 <html>
 <title>Body Language</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="../public/assets/css/bodylang.css">
+<link rel="stylesheet" href="/css/bodylang.css">
 <!--<script src="../public/assets/js/textTranslation.js"></script>-->
 <style>
     h1,
@@ -41,9 +41,9 @@
         <a href="#" class="w3-bar-item w3-button">
             <i class="fa fa-linkedin"></i>
         </a>
-        <a href="#" class="w3-bar-item w3-button w3-right">
-            <i class="fa fa-search"></i>
-        </a>
+        <button class="w3-bar-item w3-button w3-right" onclick="document.getElementById('id01').style.display='block'" style="width:auto;">
+            <i class="fa fa-male"></i>
+        </button>
     </div>
 
     <!-- w3-content defines a container for fixed size centered content, 
@@ -53,12 +53,25 @@ and is wrapped around the whole page content, except for the footer in this exam
         <!-- Header -->
         <header class="w3-container w3-center w3-padding-48 bl-top">
             <h1 class="w3-xxxlarge">
-                <b><img class="logo w3-center" src="../public/assets/img/BLLogo-1.png"></b>
+                <b>
+                    <img class="logo w3-center" src="../public/assets/img/BLLogo-1.png">
+                </b>
             </h1>
             <h6>Show your emotions
                 <span class="w3-tag">Through text</span>
             </h6>
         </header>
+
+        <!-- Color header -->
+        <!-- <header class="w3-row w3-display-container w3-wide" id="home">
+            <!--<img class="w3-image" src="/w3images/jane.jpg" alt="Fashion Blog" width="1600" height="1060"-->
+        <!-- <div class="w3-display-left w3-padding-large w3-white banner">
+                <h1 class="w3-text-grey title">Body</h1>
+                <h1 class="w3-jumbo w3-text-grey w3-hide-small title">
+                    <b>Language</b>
+                </h1>
+            </div>
+        </header> -->
 
         <!-- Grid -->
         <div class="w3-row w3-padding w3-border">
@@ -68,38 +81,34 @@ and is wrapped around the whole page content, except for the footer in this exam
 
                 <!-- Blog entry -->
                 <div class="w3-container w3-white w3-margin w3-padding-large">
-                        <div class="w3-display w3-padding-large w3-white banner">
-                                <h1 class="w3-text-grey title">Body</h1>
-                                <h1 class="w3-jumbo w3-text-grey w3-hide-small title">
-                                    <b>Language</b>
-                                </h1>
-                            </div>
-                    
+                    <div class="w3-display w3-padding-large w3-white banner">
+                        <h1 class="w3-text-grey title">Body</h1>
+                        <h1 class="w3-jumbo w3-text-grey w3-hide-small title">
+                            <b>Language</b>
+                        </h1>
+                    </div>
+
 
                     <div class="w3-justify">
-                        
+
                         <p>
-                            <strong>Many text</strong> go misunderstood beacuase of the emotionlessness of text, we are here to help with that.</p>
+                            <strong>Many text</strong> go misunderstood beacuase of the emotionlessness of text, we are here to help
+                            with that.</p>
                         <p>How are you feelin today? Type your thoughts, press the button. We'll do the rest.</p>
-                        <p class="w3-left">
-                            <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
-                                <b>
-                                    <i class="fa fa-thumbs-up"></i> Like</b>
-                            </button>
-                        </p>
                         <p class="w3-right">
                             <form>
                                 <div class="w3-row-padding">
                                     <div class="w3-col m12">
-                                      <div class="w3-card w3-round w3-white">
-                                        <div class="w3-container w3-padding">
-                                          <h6 class="w3-opacity">Lets See Some Emotion</h6>
-                                          <p contenteditable="true" class="w3-border w3-padding">We are going to apply some Body Language</p>
-                                          <button type="button" id="emoCheck" class="w3-button w3-theme"><i class="fa fa-pencil"></i>  Show Emotion</button> 
+                                        <div class="w3-card w3-round w3-white">
+                                            <div class="w3-container w3-padding">
+                                                <h6 class="w3-opacity">Lets See Some Emotion</h6>
+                                                <p contenteditable="true" class="w3-border w3-padding" id="emotionalText">We are going to apply some Body Language</p>
+                                                <button type="button" id="emoCheck" class="w3-button w3-theme">
+                                                    <i class="fa fa-pencil"></i>  Show Emotion</button>
+                                            </div>
                                         </div>
-                                      </div>
                                     </div>
-                                  </div>
+                                </div>
                             </form>
                         </p>
                         <p class="w3-clear"></p>
@@ -116,21 +125,24 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- Blog entry -->
                 <div class="w3-container w3-white w3-margin w3-padding-large">
                     <div class="w3-center">
-                        
+
                     </div>
 
                     <div class="w3-justify">
-                        <p class="w3-left" id="userEmotion">
-                                
-                        </p>
+
                         <p id="translationText">
 
                         </p>
-                        
-                        <p class="w3-clear"></p>
+
+                        <p class="w3-left">
+                            <button class="w3-button w3-white w3-border" onclick="likeFunction(this)">
+                                <b></b>
+                                <i class="fa fa-thumbs-up"></i> Like</b>
+                            </button>
+                        </p>
 
                         <!-- Example of comment field -->
-                        
+
                     </div>
                 </div>
 
@@ -142,10 +154,12 @@ and is wrapped around the whole page content, except for the footer in this exam
                 <!-- About Card -->
                 <div class="w3-margin">
                     <!--style="width:100%" -->
-                        <h4 style="color:#0fa7f6"><img src="../public/assets/img/BLGlyphy.png" alt="BL" class="w3-grayscale">Who we are</h4>
-                        <div class="w3-container" id="bl-wwa">
-                        <p>Just four people trying to get an idea together. We hope to see this grow into something useful for people when communicating via text.</p>
-                        </div>
+                    <h4 style="color:#0fa7f6">
+                        <img src="../public/assets/img/BLGlyphy.png" alt="BL" class="w3-grayscale">Who we are</h4>
+                    <div class="w3-container" id="bl-wwa">
+                        <p>Just four people trying to get an idea together. We hope to see this grow into something useful for
+                            people when communicating via text.</p>
+                    </div>
                 </div>
                 <hr>
 
@@ -154,29 +168,29 @@ and is wrapped around the whole page content, except for the footer in this exam
                     <div class="w3-container w3-padding w3-black">
                         <h4>Your Recent Emotions</h4>
                     </div>
-                    <ul class="w3-ul w3-hoverable w3-white">
-                        <li class="w3-padding-16">
-                            
-                            <span>Sed mattis nunc</span>
+                    <ul class="w3-ul w3-hoverable">
+                        <li id="span1" class="w3-padding-16">
+
+                            <span>Happy</span>
                         </li>
-                        <li class="w3-padding-16">
-                           
-                            <span>Praes tinci sed</span>
+                        <li id="span2" class="w3-padding-16">
+
+                            <span>Happy</span>
                         </li>
-                        <li class="w3-padding-16">
-                            
-                            <span>Ultricies congue</span>
+                        <li id="span3" class="w3-padding-16">
+
+                            <span>Mad</span>
                         </li>
-                        <li class="w3-padding-16">
-                           
-                            <span>Lorem ipsum dipsum</span>
+                        <li id="span4" class="w3-padding-16">
+
+                            <span>Angry</span>
                         </li>
                     </ul>
                 </div>
                 <hr>
 
                 <!-- Advertising -->
-                <div class="w3-white w3-margin">
+                <!-- <div class="w3-white w3-margin">
                     <div class="w3-container w3-padding w3-black">
                         <h4>Advertise</h4>
                     </div>
@@ -185,100 +199,130 @@ and is wrapped around the whole page content, except for the footer in this exam
                             <span class="w3-display-middle">Your AD Here</span>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <hr>
 
                 <!-- Free Area -->
                 <div class="w3-white w3-margin">
-                    
-                <hr>
 
-                <!-- Free Area -->
-                <div class="w3-white w3-margin">
-              
+                    <hr>
+
+                    <!-- Free Area -->
+                    <div class="w3-white w3-margin">
+
+                    </div>
+                    <hr>
+
+                    <div class="w3-white w3-margin">
+                        <div class="w3-container w3-padding w3-black">
+                            <h4>Follow Us</h4>
+                        </div>
+                        <div class="w3-container w3-xlarge w3-padding">
+                            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                            <i class="fa fa-instagram w3-hover-opacity"></i>
+                            <i class="fa fa-twitter w3-hover-opacity"></i>
+                            <i class="fa fa-linkedin w3-hover-opacity"></i>
+                        </div>
+                    </div>
+                    <hr>
+
+                    <!-- Subscribe -->
+                    <div class="w3-white w3-margin">
+                        <div class="w3-container w3-padding w3-black">
+                            <h4>Subscribe</h4>
+                        </div>
+                        <div class="w3-container w3-white">
+                            <p>Enter your e-mail below and get notified on Body Languages most recent updates.</p>
+                            <p>
+                                <input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%">
+                            </p>
+                            <p>
+                                <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- END About/Intro Menu -->
                 </div>
-                <hr>
 
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Follow Me</h4>
-                    </div>
-                    <div class="w3-container w3-xlarge w3-padding">
-                        <i class="fa fa-facebook-official w3-hover-opacity"></i>
-                        <i class="fa fa-instagram w3-hover-opacity"></i>
-                        <i class="fa fa-twitter w3-hover-opacity"></i>
-                        <i class="fa fa-linkedin w3-hover-opacity"></i>
-                    </div>
-                </div>
-                <hr>
-
-                <!-- Subscribe -->
-                <div class="w3-white w3-margin">
-                    <div class="w3-container w3-padding w3-black">
-                        <h4>Subscribe</h4>
-                    </div>
-                    <div class="w3-container w3-white">
-                        <p>Enter your e-mail below and get notified on Body Languages most recent updates.</p>
-                        <p>
-                            <input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%">
-                        </p>
-                        <p>
-                            <button type="button" onclick="document.getElementById('subscribe').style.display='block'" class="w3-button w3-block w3-red">Subscribe</button>
-                        </p>
-                    </div>
-                </div>
-
-                <!-- END About/Intro Menu -->
+                <!-- END GRID -->
             </div>
 
-            <!-- END GRID -->
+            <!-- END w3-content -->
         </div>
 
-        <!-- END w3-content -->
-    </div>
-
-    <!-- Subscribe Modal -->
-    <div id="subscribe" class="w3-modal w3-animate-opacity">
-        <div class="w3-modal-content" style="padding:32px">
-            <div class="w3-container w3-white">
-                <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
-                <h2 class="w3-wide">SUBSCRIBE</h2>
-                <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
-                <p>
-                    <input class="w3-input w3-border" type="text" placeholder="Enter e-mail">
-                </p>
-                <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+        <!-- Subscribe Modal -->
+        <div id="subscribe" class="w3-modal w3-animate-opacity">
+            <div class="w3-modal-content" style="padding:32px">
+                <div class="w3-container w3-white">
+                    <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove w3-transparent w3-button w3-xlarge w3-right"></i>
+                    <h2 class="w3-wide">SUBSCRIBE</h2>
+                    <p>Join my mailing list to receive updates on the latest blog posts and other things.</p>
+                    <p>
+                        <input class="w3-input w3-border" type="text" placeholder="Enter e-mail">
+                    </p>
+                    <button type="button" class="w3-button w3-block w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="w3-container w3-dark-grey" style="padding:32px">
-        <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
-            <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
-        <p>Powered by
-            <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
-        </p>
-    </footer>
-
-    <script>
-        // Toggle between hiding and showing blog replies/comments
-        document.getElementById("myBtn").click();
-
-        function myFunction(id) {
-            var x = document.getElementById(id);
-            if (x.className.indexOf("w3-show") == -1) {
-                x.className += " w3-show";
-            } else {
-                x.className = x.className.replace(" w3-show", "");
-            }
-        }
-
-        function likeFunction(x) {
-            x.style.fontWeight = "bold";
-            x.innerHTML = "✓ Liked";
-        }
-    </script>
+        <!-- Footer -->
+        <footer class="w3-container w3-dark-grey" style="padding:32px">
+            <a href="#" class="w3-button w3-black w3-padding-large w3-margin-bottom">
+                <i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+        </footer>
+        <script type="text/javascript" src="../public/assets/js/textTranslation.js"></script>
+        <script>
+            // document ready, using jquery
+            $(function () {
+                var injectScript = function (src, options) {
+                    options || (options = {});
+                    injectTag('script', { src: src, type: 'text/javascript' }, options);
+                };
+                var injectStyle = function (href, options) {
+                    options || (options = {});
+                    var img = document.createElement('img');
+                    img.onerror = options.onload || null;
+                    delete options.onload;
+                    injectTag('link', { href: href, type: 'text/css', rel: 'stylesheet' }, options);
+                    img.src = href;
+                };
+                var injectTag = function (tagName, attrs, options) {
+                    options || (options = {});
+                    var tag = document.createElement(tagName);
+                    tag.onload = options.onload || null;
+                    Object.keys(attrs).forEach(function (key) {
+                        tag.setAttribute(key, attrs[key]);
+                    });
+                    if (options.insertBefore) {
+                        options.insertBefore.parentNode.insertBefore(tag, options.insertBefore);
+                    } else if (options.appendChild) {
+                        options.appendChild.appendChild(tag);
+                    } else {
+                        var scripts = document.getElementsByTagName('script');
+                        scripts[scripts.length - 1].parentNode.appendChild(tag);
+                    }
+                };
+                var elem = document.createElement('input');
+                elem.setAttribute('type', 'date');
+                if (elem.type === 'text') {
+                    // inject jquery-ui css, then js
+                    injectStyle("./public/assets/css/bodylang.css", {
+                        // that's the CSS onload callback
+                        onload: function () {
+                            injectScript("./public/assets/js/textTranslation.js", {
+                                // that's the JS onload callback
+                                
+                                    }
+                                }
+                            });
+                        }
+                    });
+                } else {
+                    dateFied.data("fellback", false);
+                }
+            });
+        </script>
 
 </body>
 
